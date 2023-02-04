@@ -1,7 +1,8 @@
 @import "vars";
+@import "fonts";
 
 body {
-    font-family: sans-serif;
+    @include reg;
 }
 
 img {
@@ -50,7 +51,7 @@ img {
     }
     &__phone {
         font-size: 20px;
-        font-weight: 400;
+        @include bold;
         color: $accent;
         text-decoration: none;
         display: block;
@@ -61,7 +62,8 @@ img {
         border-radius: 10px;
         margin-left: 30px;
         font-size: 13px;
-        font-weight: 400;
+        @include bold;
+        
     }
 }
 
@@ -86,6 +88,7 @@ img {
             color: $accent;
             padding-right: 200px;
             line-height: 55px;
+            @include bold;
             margin: 45px 0 20px 0;
             @media (max-width: 1200px) {
                 padding-right: 10px;
@@ -99,6 +102,7 @@ img {
             font-size: 20px;
             line-height: 65px;
             color: $accent;
+            @include bold;
             @media (max-width: 640px) {
                 font-size: 16px;
                 line-height: 1.4;
