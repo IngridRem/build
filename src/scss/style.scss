@@ -1,6 +1,10 @@
 @import "vars";
 @import "fonts";
 
+* {
+box-sizing: border-box;
+}
+
 body {
     @include reg;
 }
@@ -21,6 +25,16 @@ img {
     background-color: $buttons;
     color: $accent;
     border: none;
+    padding: 18px 47px;
+    border-radius: 10px;
+}
+
+.input{
+    border: 1px solid $border-input;
+    font-size: 15px;
+    padding: 25px;
+    border-radius: 10px;
+    
 }
 
 .header {
@@ -58,11 +72,14 @@ img {
         margin-top: 5px;
     }
     &__button {
-        padding: 18px 47px;
-        border-radius: 10px;
+        
         margin-left: 30px;
         font-size: 13px;
         @include bold;
+        &:hover {
+            filter: brightness(85%);
+            cursor: pointer;
+        }
         
     }
 }
@@ -125,6 +142,9 @@ img {
             display: flex;
             align-items: center;
             margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
             @media (max-width: 640px) {
                 margin-bottom: 15px;
             }
@@ -155,4 +175,118 @@ img {
     }
 
 }
+
+.offer {
+    padding: 90px 0;
+    background: url('../img/img-2.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    position: relative;
+    @media (max-width: 1200px) {
+        background-size: cover;
+    }
+    @media (max-width: 768px) {
+        background: #fff;
+    }
+    &:before {
+        content: '';
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        background-color: #fff;
+        top:0;
+        left: 0;
+    }
+
+    &-block {
+        width: 50%;
+        padding-right: 90px;
+        position: relative;
+        @media (max-width: 768px) {
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+    &-title{
+       font-size: 24px;
+       line-height: 35px;
+       max-width: 350px;
+       margin-bottom: 25px;
+       @include bold
+    }
+    &-subtitle {
+        display: inline-block;
+        font-size: 16px;
+        max-width: 260px;
+        margin-bottom: 35px;
+    }
+    &__input {
+        width: 240px;
+        margin-bottom: 30px;
+        @media (max-width: 1200px) {
+            width: 100%; 
+            margin-bottom: 15px;
+        }
+        &:first-child {
+            margin-right: 10px;
+        }
+    }
+    &__button {
+        width: 100%;
+        min-width: 70px;
+        @include bold;
+        @media (max-width: 1200px) {
+            font-size: 13px;
+        }
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+    &-textwrap{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 31px;
+        @media (max-width: 970px) {
+            flex-direction: column;
+        }
+        @media (max-width: 768px) {
+            padding-top: 27px;
+        }   
+    }
+    &__text1 {
+        width: 170px;
+        line-height: 24px;
+        font-size: 15px;
+        @media (max-width: 970px) {
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            width: 170px;
+        }   
+    }
+    &__contact {
+        width: 170px;
+        font-size: 15px;
+        line-height: 24px;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 970px) {
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+        }
+        @media (max-width: 810px) {
+            flex-direction: column;
+            width: 170px;
+        }
+    }  
+    &__phone {
+        font-size: 15px;
+        @include bold;
+        color: $accent;
+        text-decoration: none;
+    }
+}
+
 
