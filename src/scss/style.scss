@@ -9,9 +9,7 @@ body {
     @include reg;
 }
 
-img {
-    width: 100%;
-}
+
 .container {
     max-width: 1170px;
     width: 96%;
@@ -35,6 +33,13 @@ img {
     padding: 25px;
     border-radius: 10px;
     
+}
+
+.section-title {
+    font-size: 30px;
+    @include bold;
+    text-align: center;
+    line-height: 45px;
 }
 
 .header {
@@ -85,7 +90,7 @@ img {
 }
 
 .main {
-    background-color: $gray;
+    background-color: $grey;
 
     &-block {
         display: flex;
@@ -291,6 +296,31 @@ img {
         color: $accent;
         text-decoration: none;
     }
+}
+
+.portfolio{
+   padding: 100px; 
+   background: $grey url('../img/potfolio_br.png') center repeat-y;
+   background-size: 50%;
+   &__title {
+        margin-bottom: 100px;
+        color: $accent;
+   }
+   &__arrows {
+    max-width: 120px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 70px;
+   }
+}
+
+.arrows__left, .arrows__right {
+    cursor: pointer;
+}
+
+.slider__image {
+    margin: auto;
 }
 
 .modal {
