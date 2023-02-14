@@ -18,13 +18,13 @@ $(document).ready (function(){
         nextArrow: $('.arrows__right'),
         responsive: [
             {
-              breakpoint: 1200,
+              breakpoint: 1370,
               settings: {
                 slidesToShow: 2,
               }
             },
             {
-              breakpoint: 768,
+              breakpoint: 980,
               settings: {
                 slidesToShow: 1,
               }
