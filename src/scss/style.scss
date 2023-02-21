@@ -755,4 +755,11 @@ body {
     }
 }
 
-
+.error {
+    border: 2px solid red;
+    border-radius: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
