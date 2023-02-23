@@ -18,26 +18,6 @@ $(document).ready (function(){
 
     //Validácia formulára
 
-    $('#brief-form').validate({
-        rules: {
-            username: {
-                required: true,
-                minlength: 2
-            },
-            phone: {
-                required: true,
-                number: true,
-                rangelength: [10,10]
-            }
-        },
-        messages: {
-            username:"Uveďte Vaše jméno",
-            phone: "Uveďte Váš telefon ve formátu 0xxxxxxxxx"
-        }
-    });
-
-
-
     $('#offer-form').validate({
         rules: {
             username: {
@@ -46,8 +26,6 @@ $(document).ready (function(){
             },
             phone: {
                 required: true,
-                number: true,
-                rangelength: [10,10]
             }
         },
         messages: {
@@ -55,6 +33,23 @@ $(document).ready (function(){
             phone: "Uveďte Váš telefon"
         }
     });
+
+    $('#brief-form').validate({
+        rules: {
+            username: {
+                required: true,
+                minlength: 2
+            },
+            phone: {
+                required: true,
+            }
+        },
+        messages: {
+            username:"Uveďte Vaše jméno",
+            phone: "Uveďte Váš telefon"
+        }
+    });
+
 
 
     //napojenie slider
